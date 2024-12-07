@@ -18,4 +18,11 @@ python3 -m venv traccc
 source traccc/bin/activate
 deactivate
 ```
+# traccc Requirement
+```
+sudo apt update
+sudo apt install -y build-essential cmake g++ gcc libboost-all-dev
+
+```
+
 Install flow: https://medium.com/@misscoming/%E5%9C%A8-windows-10-%E4%B8%8A%E8%B7%91-ubuntu-18-04-92f80b2d725b
