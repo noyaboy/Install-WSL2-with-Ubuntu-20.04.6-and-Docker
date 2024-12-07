@@ -26,17 +26,26 @@ In Ubuntu 20.04.6 LTS
 ```
 sudo apt update
 sudo apt install -y build-essential cmake g++ gcc libboost-all-dev
-
 ```
-![image](https://github.com/user-attachments/assets/cd8ec24d-a22e-47bb-9572-ced6aa340b8d)
-確認輸出GPU型號
+reinstall gcc
 ```
-lspci | grep -i nvidia
+gcc --version
+sudo apt remove --purge gcc
+sudo apt autoremove --purge -y
+wget http://ftp.gnu.org/gnu/gcc/gcc-9.3.0/gcc-9.3.0.tar.gz
+tar -xvzf gcc-9.3.0.tar.gz
+cd gcc-9.3.0
+sudo apt update
+sudo apt install -y build-essential libgmp-dev libmpfr-dev libmpc-dev
+./configure --prefix=/usr/local/gcc-9.3.0 --enable-languages=c,c++ --disable-multilib
+make -j$(nproc)
+sudo make install
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/local/gcc-9.3.0/bin/gcc 100
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/local/gcc-9.3.0/bin/g++ 100
+gcc --version
+g++ --version
 ```
-![image](https://github.com/user-attachments/assets/cf7c0e12-ef7e-4ec6-bb23-aadd0db52af1)
-```
-```
-
+desired output gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
 ```
 ```
 
