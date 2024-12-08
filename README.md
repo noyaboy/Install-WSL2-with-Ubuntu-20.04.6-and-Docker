@@ -1,6 +1,6 @@
 # Install WSL2 with Ubuntu 20.04.6
 
-SVM mode
+SVM mode.
 ```
 step1 When booting up, press F2 to enter the BIOS.
 step2 Press F7 to switch to Advanced Mode.
@@ -20,18 +20,18 @@ step6 Enable Windows Hypervisor
 
 ```
 
-In Window power shell running as administrator
+In Window power shell running as administrator, then reboot.
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-WSL, in Window power shell running as administrator
+WSL, in Window power shell running as administrator, then reboot.
 ```
 wsl --install
 ```
 
-WSL2 after rebooting
+WSL2
 ```
 wsl --install -d Ubuntu-20.04
 wsl --set-version Ubuntu-20.04 2
