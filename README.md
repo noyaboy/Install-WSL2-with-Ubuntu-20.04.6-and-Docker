@@ -6,8 +6,17 @@ step1 Control Panel
 step2 Programs
 step3 Programs and Features
 step4 Turn Windows features on or off
-step5 Enable Windows Subsystem for Linux (WSL)
+step5 Enable Windows Subsystem for Linux
+step6 Enable Windows Hypervisor
+
 ```
+
+In Window power shell running as administrator
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
 
 SVM mode
 ```
