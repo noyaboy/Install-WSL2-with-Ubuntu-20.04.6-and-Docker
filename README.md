@@ -25,28 +25,30 @@ deactivate
 In Ubuntu 20.04.6 LTS
 ```
 sudo apt update
-sudo apt install -y build-essential cmake g++ gcc libboost-all-dev
-```
-reinstall gcc
-```
-gcc --version
-sudo apt remove --purge gcc
-sudo apt autoremove --purge -y
-wget http://ftp.gnu.org/gnu/gcc/gcc-9.3.0/gcc-9.3.0.tar.gz
-tar -xvzf gcc-9.3.0.tar.gz
-cd gcc-9.3.0
+sudo apt install libboost-all-dev
+dpkg -s libboost-all-dev | grep Version
+sudo apt install cmake
+cmake --version
+sudo apt install software-properties-common
+sudo add-apt-repository 'deb https://root.cern/download/cling apt main'
+wget https://root.cern/download/cling/keys/ROOT.gpg.key
+sudo apt-key add ROOT.gpg.key
 sudo apt update
-sudo apt install -y build-essential libgmp-dev libmpfr-dev libmpc-dev
-./configure --prefix=/usr/local/gcc-9.3.0 --enable-languages=c,c++ --disable-multilib
-make -j$(nproc)
-sudo make install
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/local/gcc-9.3.0/bin/gcc 100
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/local/gcc-9.3.0/bin/g++ 100
-gcc --version
-g++ --version
+sudo apt install root-system-bin
 ```
-desired output gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+新增下行至.bashrc
 ```
+source /usr/lib/root/bin/thisroot.sh
+```
+```
+source ~/.bashrc
+root
+```
+檢查
+```
+`dpkg -s libboost-all-dev
+cmake --version
+root
 ```
 
 
