@@ -59,7 +59,7 @@ Check systemd
 wsl -d Ubuntu-20.04
 systemd
 ```
-[systemd install](https://github.com/DamionGans/ubuntu-wsl2-systemd-script)  
+[systemd install if needed](https://github.com/DamionGans/ubuntu-wsl2-systemd-script)  
 
 Reboot Ubuntu, after install systemd
 ```
