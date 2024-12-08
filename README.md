@@ -1,26 +1,40 @@
-# Reinstall 
-In Window power shell run as administrator
+# Install WSL2 with Ubuntu 20.04.6
+
+Windows Linux Subsystem
 ```
-wsl --list --verbose
-wsl --unregister Ubuntu-20.04
+step1 Control Panel
+step2 Programs
+step3 Programs and Features
+step4 Turn Windows features on or off
+step5 Enable Windows Subsystem for Linux (WSL)
+```
+
+SVM mode
+```
+step1 When booting up, press F2 to enter the BIOS.
+step2 Press F7 to switch to Advanced Mode.
+step3 Set SVM to "Enabled."
+step4 Set UMA Frame Buffer Size to "Auto."
+step5 Press F10 and confirm by selecting OK.
+```
+
+WSL, in Window power shell running as administrator
+```
+wsl --install
+```
+
+WSL2 after rebooting
+```
 wsl --install -d Ubuntu-20.04
+wsl --set-version Ubuntu-20.04 2
+wsl --list --verbose
 exit
 wsl -d Ubuntu-20.04
 ```
-# Virtual Environment 
-In Ubuntu 20.04.6 LTS
+
+Remove
 ```
-python3 --version
-pip3 --version
-sudo apt update
-sudo apt install python3
-sudo apt install python3-pip
-venv --version
-sudo apt install python3-venv
-python3 -m venv traccc
-source traccc/bin/activate
-deactivate
+wsl --unregister Ubuntu-20.04
 ```
 
 
-[Install flow](https://medium.com/@misscoming/%E5%9C%A8-windows-10-%E4%B8%8A%E8%B7%91-ubuntu-18-04-92f80b2d725b)
