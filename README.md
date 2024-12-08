@@ -1,5 +1,14 @@
 # Install WSL2 with Ubuntu 20.04.6
 
+SVM mode
+```
+step1 When booting up, press F2 to enter the BIOS.
+step2 Press F7 to switch to Advanced Mode.
+step3 Set SVM to "Enabled."
+step4 Set UMA Frame Buffer Size to "Auto."
+step5 Press F10 and confirm by selecting OK.
+```
+
 Windows Linux Subsystem
 ```
 step1 Control Panel
@@ -15,16 +24,6 @@ In Window power shell running as administrator
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-```
-
-
-SVM mode
-```
-step1 When booting up, press F2 to enter the BIOS.
-step2 Press F7 to switch to Advanced Mode.
-step3 Set SVM to "Enabled."
-step4 Set UMA Frame Buffer Size to "Auto."
-step5 Press F10 and confirm by selecting OK.
 ```
 
 WSL, in Window power shell running as administrator
