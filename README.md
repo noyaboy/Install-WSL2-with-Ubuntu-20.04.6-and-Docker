@@ -59,7 +59,7 @@ Check systemd
 wsl -d Ubuntu-20.04
 systemd
 ```
-Install systemd
+Install systemd if needed
 ```
 sudo apt install git
 git clone https://github.com/DamionGans/ubuntu-wsl2-systemd-script.git
