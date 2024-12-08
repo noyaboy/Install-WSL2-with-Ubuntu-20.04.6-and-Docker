@@ -41,18 +41,32 @@ wsl --version
 wsl --set-default-version 2
 ```
 
-Ubuntu
+Install Ubuntu
 ```
 wsl --install -d Ubuntu-20.04
+exit
 wsl --list --verbose
 wsl --set-version Ubuntu-20.04 2
-exit
-wsl -d Ubuntu-20.04
 ```
 
-Remove
+Remove Ubuntu if needed
 ```
 wsl --unregister Ubuntu-20.04
+```
+
+Check systemd
+```
+wsl -d Ubuntu-20.04
+systemd
+```
+[systemd install](https://github.com/DamionGans/ubuntu-wsl2-systemd-script)  
+
+Reboot Ubuntu, after install systemd
+```
+wsl -t Ubuntu-20.04
+wsl -d Ubuntu-20.04
+systemd
+ps aux # check existence of systemd process
 ```
 
 
