@@ -94,6 +94,7 @@ echo \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo docker run hello-world
+sudo docker --version
 ```
 Reference: [使用WSL2在Windows下快速打造Linux開發環境(含Docker)](https://ithelp.ithome.com.tw/articles/10255920)
 
