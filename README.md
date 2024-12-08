@@ -1,4 +1,4 @@
-# Install WSL2 with Ubuntu 20.04.6
+# Install WSL2 with Ubuntu 20.04.6 and Docker
 
 SVM mode.
 ```
